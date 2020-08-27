@@ -26,7 +26,7 @@ BuildRequires:  cmake(KF5KIO)
 BuildRequires:  cmake(KF5GuiAddons)
 BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  cmake(KF5Notifications)
-BuildRequires:	cmake(LibExiv2)
+BuildRequires:	pkgconfig(exiv2)
 
 %description
 Koko is an image viewer for desktop and touch devices.
