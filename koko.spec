@@ -1,4 +1,4 @@
-%define snapshot 20200827
+%define snapshot 20200919
 
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
@@ -27,6 +27,7 @@ BuildRequires:  cmake(KF5GuiAddons)
 BuildRequires:  cmake(KF5CoreAddons)
 BuildRequires:  cmake(KF5Notifications)
 BuildRequires:	pkgconfig(exiv2)
+Requires:	qml(org.kde.purpose)
 
 %description
 Koko is an image viewer for desktop and touch devices.
