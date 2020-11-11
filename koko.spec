@@ -1,4 +1,4 @@
-%define snapshot 20200919
+%define snapshot 20201015
 
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
