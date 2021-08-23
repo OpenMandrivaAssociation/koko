@@ -1,13 +1,15 @@
-%define snapshot 20210401
-
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
-Version:	0.0
+Version:	21.07
 Release:	%{?snapshot:0.%{snapshot}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		https://invent.kde.org/graphics/koko
+%if %{defined snapshot}
 Source0:	https://invent.kde.org/graphics/koko/-/archive/master/koko-master.tar.bz2
+%else
+Source0:	https://download.kde.org/stable/plasma-mobile/%{version}/%{name}-%{version}.tar.xz
+%endif
 Source1:	http://download.geonames.org/export/dump/cities1000.zip
 Source2:	http://download.geonames.org/export/dump/admin1CodesASCII.txt
 Source3:	http://download.geonames.org/export/dump/admin2Codes.txt
@@ -37,7 +39,7 @@ Requires:	qml(org.kde.kquickimageeditor)
 Koko is an image viewer for desktop and touch devices.
 
 %prep
-%autosetup -p1 -n %{name}-master
+%autosetup -p1 %{?snapshot:-n %{name}-master}
 cp %{S:1} %{S:2} %{S:3} src/
 %cmake_kde5
 
@@ -46,8 +48,9 @@ cp %{S:1} %{S:2} %{S:3} src/
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
 
-%files
+%files -f %{name}.lang
 %{_bindir}/koko
 # No point in libpackaging this, just internal stuff
 # with no headers shipped.
