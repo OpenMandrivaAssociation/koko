@@ -1,6 +1,6 @@
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
-Version:	22.04
+Version:	22.06
 Release:	%{?snapshot:1.%{snapshot}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
