@@ -1,7 +1,7 @@
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
 Version:	23.08.4
-Release:	%{?snapshot:0.%{snapshot}.}1
+Release:	%{?snapshot:0.%{snapshot}.}2
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		https://invent.kde.org/graphics/koko
