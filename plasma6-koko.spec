@@ -1,7 +1,7 @@
 Name:		plasma6-koko
 Summary:	Image viewer for desktop and touch devices
-Version:	24.01.90
-Release:	%{?snapshot:0.%{snapshot}.}2
+Version:	24.01.95
+Release:	%{?snapshot:0.%{snapshot}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		https://invent.kde.org/graphics/koko
