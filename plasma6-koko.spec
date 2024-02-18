@@ -1,12 +1,15 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		plasma6-koko
 Summary:	Image viewer for desktop and touch devices
-Version:	24.01.95
-Release:	%{?snapshot:0.%{snapshot}.}1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		https://invent.kde.org/graphics/koko
-%if %{defined snapshot}
-Source0:	https://invent.kde.org/graphics/koko/-/archive/master/koko-master.tar.bz2
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/graphics/koko/-/archive/%{gitbranch}/koko-%{gitbranchd}.tar.bz2#/koko-%{git}.tar.bz2
 %else
 Source0:	https://download.kde.org/%(if [ $(echo %{version} |cut -d. -f3) -ge 50 ]; then echo -n un; fi)stable/release-service/%{version}/src/koko-%{version}.tar.xz
 %endif
@@ -40,7 +43,7 @@ Requires:	qml(org.kde.kquickimageeditor)
 Koko is an image viewer for desktop and touch devices.
 
 %prep
-%autosetup -p1 -n koko-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n koko-%{?git:%{gitbranchd}}%{!?git:%{version}}
 cp %{S:1} %{S:2} %{S:3} src/
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \

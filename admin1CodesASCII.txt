@@ -2399,16 +2399,20 @@ NL.03	Gelderland	Gelderland	2755634
 NL.02	Friesland	Friesland	2755812
 NL.01	Drenthe	Drenthe	2756631
 NL.16	Flevoland	Flevoland	3319179
+NO.05	Finnmark	Finnmark	780166
+NO.20	Vestfold	Vestfold	3132015
+NO.18	Troms	Troms	3133897
+NO.17	Telemark	Telemark	3134723
 NO.14	Rogaland	Rogaland	3141558
+NO.13	Østfold	Ostfold	3143188
 NO.12	Oslo	Oslo	3143242
 NO.09	Nordland	Nordland	3144301
 NO.08	Møre og Romsdal	More og Romsdal	3145495
+NO.04	Buskerud	Buskerud	3159665
+NO.01	Akershus	Akershus	3163480
 NO.21	Trøndelag	Trondelag	11862827
-NO.30	Viken	Viken	12110595
 NO.42	Agder	Agder	12110596
-NO.54	Troms og Finnmark	Troms og Finnmark	12110597
 NO.34	Innlandet	Innlandet	12110598
-NO.38	Vestfold og Telemark	Vestfold og Telemark	12110599
 NO.46	Vestland	Vestland	12110600
 NP.1	Province 1	Province 1	12095447
 NP.2	Province 2	Province 2	12095448
