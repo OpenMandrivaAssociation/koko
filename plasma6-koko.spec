@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		plasma6-koko
 Summary:	Image viewer for desktop and touch devices
-Version:	24.05.1
+Version:	24.05.2
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
