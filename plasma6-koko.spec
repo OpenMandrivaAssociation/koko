@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		plasma6-koko
 Summary:	Image viewer for desktop and touch devices
-Version:	24.08.3
+Version:	24.12.0
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -60,8 +60,6 @@ cp %{S:1} %{S:2} %{S:3} src/
 %{_bindir}/koko
 # No point in libpackaging this, just internal stuff
 # with no headers shipped.
-%{_libdir}/libkokocommon.so*
-%{_libdir}/qt6/qml/org/kde/koko
 %{_datadir}/applications/org.kde.koko.desktop
 %{_datadir}/knotifications6/koko.notifyrc
 %{_datadir}/koko
