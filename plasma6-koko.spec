@@ -39,6 +39,7 @@ BuildRequires:	pkgconfig(exiv2)
 BuildRequires:	qml(org.kde.kquickimageeditor)
 BuildRequires:	cmake(KQuickImageEditor)
 BuildRequires:	pkgconfig(xcb-atom)
+BuildRequires:	pkgconfig(xkbcommon)
 Requires:	qml(org.kde.purpose)
 Requires:	qml(org.kde.kquickimageeditor)
 
