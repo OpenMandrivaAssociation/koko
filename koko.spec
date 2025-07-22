@@ -3,7 +3,7 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
@@ -43,24 +43,18 @@ BuildRequires:	pkgconfig(xkbcommon)
 Requires:	qml(org.kde.purpose)
 Requires:	qml(org.kde.kquickimageeditor)
 
+%rename plasma6-koko
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Koko is an image viewer for desktop and touch devices.
 
-%prep
-%autosetup -p1 -n koko-%{?git:%{gitbranchd}}%{!?git:%{version}}
+%prep -a
 cp %{S:1} %{S:2} %{S:3} src/
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
 
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang koko --with-html
-
-%files -f koko.lang
+%files -f %{name}.lang
 %{_bindir}/koko
 # No point in libpackaging this, just internal stuff
 # with no headers shipped.
