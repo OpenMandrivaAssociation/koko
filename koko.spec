@@ -3,8 +3,8 @@
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 Name:		koko
 Summary:	Image viewer for desktop and touch devices
-Version:	26.08.1
-Release:	%{?git:0.%{git}.}2
+Version:	26.08.2
+Release:	%{?git:0.%{git}.}1
 Group:		Graphical desktop/KDE
 License:	GPLv2
 Url:		https://invent.kde.org/graphics/koko
